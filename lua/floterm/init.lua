@@ -1,4 +1,3 @@
-local M = {}
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 local state = {
@@ -55,12 +54,4 @@ end
 
 -- Example usage:
 -- Create a floating window with default dimensions
-local function setup_user_commands()
-  vim.api.nvim_create_user_command("Floterm", toggle_terminal, {})
-end
-
-M.setup = function()
-  setup_user_commands()
-end
-
-return M
+vim.api.nvim_create_user_command("Floaterminal", toggle_terminal, {})
